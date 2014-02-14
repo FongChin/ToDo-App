@@ -4,7 +4,13 @@ window.ToDoApp = {
   Views: {},
   Routers: {},
   initialize: function() {
-    // alert('Hello from Backbone!');
+    ToDoApp.tasks = new ToDoApp.Collections.Tasks({});
+    ToDoApp.tasks.fetch({
+      success: function(){
+        new ToDoApp.Routers.Tasks();
+        Backbone.history.start();
+      }
+    });
   }
 };
 

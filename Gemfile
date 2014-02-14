@@ -27,7 +27,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'jasmine'
+  gem 'jasmine-rails'
 end
 
 gem 'backbone-on-rails'

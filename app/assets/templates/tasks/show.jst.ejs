@@ -1,0 +1,14 @@
+<input type="checkbox" 
+  <% if (task.get("complete")){ %>
+    <%= "checked" %>
+  <% }; %>
+/>
+<span
+  <% if (task.get("complete")){ %>
+    class="complete description"
+  <% }else { %>
+    class="description"
+  <% }; %> >
+<%= task.escape("description") %>
+</span>
+<span class="delete_task">x</span>

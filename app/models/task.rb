@@ -1,6 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :complete, :description
-  
+  attr_accessible :complete, :description  
   validates_presence_of :description
   
   def completed?

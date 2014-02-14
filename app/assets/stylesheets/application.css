@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+.complete{
+  text-decoration: line-through;
+  color: #6D3DAA;
+}

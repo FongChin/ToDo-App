@@ -1,0 +1,5 @@
+<% tasks.each(function(task){ %>
+  <div class="task" data-id="<%= task.id %>">
+    <%= JST["tasks/show"]({task: task}) %>
+  </div>
+<% }); %>
