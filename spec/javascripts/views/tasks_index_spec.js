@@ -36,7 +36,7 @@ describe("Task Index View", function(){
     
     it("clicking the checkbox should toggle the complete status", function(){
       this.tasksIndex.$el.find("input[type='checkbox']").first().click();
-      expect(this.save_stub).toHaveBeenCalledOnce;
+      expect(this.toggleStatusStub).toHaveBeenCalledOnce;
     })
   })
   
