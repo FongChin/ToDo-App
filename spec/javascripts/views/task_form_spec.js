@@ -2,7 +2,6 @@ describe("Task Form View", function(){
   beforeEach(function(){
     this.tasks = new ToDoApp.Collections.Tasks();
     this.taskForm = new ToDoApp.Views.TaskForm({
-      model: new ToDoApp.Models.Task(),
       collection: this.tasks
     });
     this.taskForm.render();

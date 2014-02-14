@@ -16,3 +16,24 @@
   text-decoration: line-through;
   color: #6D3DAA;
 }
+
+#tasks{
+  height: 300px;
+  overflow: scroll;
+  padding-bottom: 10px;
+}
+
+.task{
+  border-bottom: 1px solid #e63531;
+  padding-bottom: 5px;
+}
+
+#wrapper{
+  border: 1px solid #e2e2e2;
+  margin: 50px auto;
+  -moz-box-shadow: 0 0 6px 1px #bbb;
+  -webkit-box-shadow: 0 0 6px 1px #bbb;
+  box-shadow: 0 0 6px 1px #bbb;
+  padding: 30px 30px 0px 30px;
+  border-radius: 5px;
+}

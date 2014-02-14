@@ -30,8 +30,13 @@ describe("Task Index View", function(){
     afterEach(function(){
       this.toggleStatusStub.restore();
     })
+    
     it("should be able to find two checkboxes", function(){
       expect(this.tasksIndex.$el.find("input[type='checkbox']").length).toEqual(2);
+    })
+    
+    it("delete button should have data-id attribute", function(){
+      expect(this.tasksIndex.$el.find("input[type='checkbox']").first().data("id")).toEqual(1);
     })
     
     it("clicking the checkbox should toggle the complete status", function(){
@@ -45,11 +50,17 @@ describe("Task Index View", function(){
       this.task = this.tasks.get(1);
       this.deleteStub = sinon.stub(this.task, "destroy");
     })
+    
     afterEach(function(){
       this.deleteStub.restore();
     })
+    
     it("should be able to find two .delete_task buttons", function(){
       expect(this.tasksIndex.$el.find(".delete_task").length).toEqual(2);
+    })
+    
+    it("delete button should have data-id attribute", function(){
+      expect(this.tasksIndex.$el.find(".delete_task").first().data("id")).toEqual(1);
     })
     
     it("clicking .delete_task should remove the task in collection", function(){

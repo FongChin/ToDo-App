@@ -8,8 +8,9 @@ ToDoApp.Routers.Tasks = Backbone.Router.extend({
     var taskForm = new ToDoApp.Views.TaskForm({
       model: new ToDoApp.Models.Task(), 
       collection: ToDoApp.tasks
-    })
+    });
     $("#tasks").html(tasksIndex.render().$el);
+    $("#tasks").scrollTop($("#tasks")[0].scrollHeight);
     $("#task_form").html(taskForm.render().$el);
   }
   

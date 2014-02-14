@@ -2,7 +2,7 @@
 
 Run the following on both development and test environments.
 
-``rake db:migrate``
-``rake db:create:all``
+```rake db:migrate```
+```rake db:create:all```
 
-Go To http://localhost:3000/specs to run tests
+Go To [http://localhost:3000/specs](http://localhost:3000/specs) to run tests
