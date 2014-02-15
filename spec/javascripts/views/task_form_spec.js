@@ -33,10 +33,17 @@ describe("Task Form View", function(){
     afterEach(function(){
       this.submitStub();
     })
+    
+    it("should not accept empty string for task description", function(){
+      this.taskForm.trigger("submit");
+      expect(this.submitStub).toHaveBeenCalledOnce;
+      expect(this.createStub).not.toHaveBeenCalledOnce;
+    })
+    
     it("collection should have a model", function(){
       this.taskForm.$("#description_input").val("New Task");
       this.taskForm.trigger("submit");
-      expect(this.saveStub).toHaveBeenCalledOnce;
+      expect(this.submitStub).toHaveBeenCalledOnce;
       expect(this.createStub).toHaveBeenCalledOnce;
     })
   })

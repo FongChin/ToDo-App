@@ -16,6 +16,9 @@ ToDoApp.Views.TaskForm = Backbone.View.extend({
   submit: function(event){
     event.preventDefault();
     var data = this.$el.serializeJSON();
+    if (data["task"]["description"] == ""){
+      return
+    }
     var $descriptionInput = this.$("#description_input");
     this.collection.create(data["task"], {
       success: function(){

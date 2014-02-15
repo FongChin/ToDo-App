@@ -13,7 +13,6 @@ ToDoApp.Views.TasksIndex = Backbone.View.extend({
   render: function(){
     var renderedContent = this.template({tasks: this.collection});
     this.$el.html(renderedContent);
-    $("#tasks").scrollTop($("#tasks")[0].scrollHeight);
     return this;
   },
   

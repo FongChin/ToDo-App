@@ -10,7 +10,6 @@ ToDoApp.Routers.Tasks = Backbone.Router.extend({
       collection: ToDoApp.tasks
     });
     $("#tasks").html(tasksIndex.render().$el);
-    $("#tasks").scrollTop($("#tasks")[0].scrollHeight);
     $("#task_form").html(taskForm.render().$el);
   }
   
