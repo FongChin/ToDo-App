@@ -11,7 +11,8 @@ ToDoApp.Views.TasksIndex = Backbone.View.extend({
   },
   
   render: function(){
-    var renderedContent = this.template({tasks: this.collection});
+    this.collection.sort();
+    var renderedContent = this.template({ tasks: this.collection });
     this.$el.html(renderedContent);
     return this;
   },

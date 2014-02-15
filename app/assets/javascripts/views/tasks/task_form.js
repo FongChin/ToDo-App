@@ -21,6 +21,7 @@ ToDoApp.Views.TaskForm = Backbone.View.extend({
     }
     var $descriptionInput = this.$("#description_input");
     this.collection.create(data["task"], {
+      wait: true,
       success: function(){
         $descriptionInput.val("");
         $descriptionInput.focus();
